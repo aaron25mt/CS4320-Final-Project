@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Find Local Artist and Shows</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style> 
+        input[type=text] {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: center; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        opacity: .9;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]{
+            width: 50%;
+            margin-top: 20px;
+        }
+        
+        body{
+            background-image: url('https://media.giphy.com/media/nYijNcY8PWWrK/giphy.gif');
+            background-size: cover;
+        }
+        
+        div{
+            margin-top: 0%;
+            margin-left: 34%;
+        }
+        
+        button{
+            padding: 10px; 
+            margin-left: 20px;
+        }
+        
+        form{
+            width: 90%;
+            margin-top: 40px;
+            margin-left: 115px;
+            border: 1px solid black; 
+            background-color: lightblue;
+            opacity: 0.6;
+        }
+        
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        } 
+        
+        tr,td{
+            border: 2px solid white;
+            padding: 20px;
+        }
+        
+        #odd{
+            background-color: white;
+        }
+        
+        #odd:hover{
+            background-color: slategray;
+            opacity:.9;
+        }
+        
+        tr:hover {
+            background-color: slategray;
+            opacity:.9;
+        }
+        
+        p{
+            font-size: 30px;
+        }
+        
+        #offset{
+            text-align: left;
+        }
+        
+        a:hover{
+            color: white;
+        }
+        
+        img{
+            width: 500px;
+            height 300px;
+        }
+        
+        .mySlides {
+            display:none;
+            width: 100%;
+        }
+             
+    </style>
+        
+    </head>
+    <body>    
+        
+    <div>
+    <input type="text" name="search" placeholder="Search For Concerts Near You and Artists">
+    <button type="button">Search</button>
+    </div>
+        
+    <img class="mySlides" src="https://media.giphy.com/media/yXJieZoSaLx6w/giphy.gif">
+    <img class="mySlides" src="https://media.giphy.com/media/nYijNcY8PWWrK/giphy.gif">
+    <img class="mySlides" src="http://25.media.tumblr.com/f254105ae6672e6252d171badfe14299/tumblr_mhiz6jgJ7N1rag9fdo1_500.gif">  
+        
+    <form>
+        <table> 
+        <tr id=odd>
+            <td>
+            <h1 class="w3-center"> Title of Venue: Artist</h1>
+
+            <img src="viper.png" alt="Picture">                        
+
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="https://www.w3schools.com/html/">Click to read more...</a>
+            </p>
+
+            </td>    
+        </tr>
+            
+        <tr>
+            <td>
+            <h1> Title of Venue: Artist</h1> 
+                
+            <img src="viper.png" alt="Picture">        
+                
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            
+            <p>
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="https://www.w3schools.com/html/">Click to read more...</a>
+            </p>
+
+            </td>   
+        </tr>
+            
+        <tr id=odd>
+            <td>
+            <h1> Title of Venue: Artist</h1>   
+                
+            <img src="viper.png" alt="Picture">        
+                
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="https://www.w3schools.com/html/">Click to read more...</a>
+            </p>
+
+            </td>   
+        </tr>
+            
+        <tr>
+            <td>
+            <h1> Title of Venue: Artist</h1>       
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="url">Click to read more...</a>
+            </p>
+
+            </td>   
+        </tr>
+            
+        <tr id=odd>
+            <td>
+            <h1> Title of Venue: Artist</h1>       
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="url">Click to read more...</a>
+            </p>
+
+            </td>   
+        </tr>
+            
+        <tr>
+            <td>
+            <h1> Title of Venue: Artist</h1>       
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="url">Click to read more...</a> 
+            </p>
+
+            </td>   
+        </tr>
+            
+        <tr id=odd>
+            <td>
+            <h1> Title of Venue: Artist</h1>       
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="url">Click to read more...</a>
+            </p>
+
+            </td>   
+        </tr>
+            
+        <tr>
+            <td>
+            <h1> Title of Venue: Artist</h1>  
+            <p>
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+           
+            <p id=offset>
+                <a href="url">Click to read more...</a>
+            </p>
+
+            </td>   
+        </tr>
+        
+        </table>      
+    </form>
+        
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 5000); // Change image every 5 seconds
+        }    
+    </script>  
+        
+    </body>
+</html>
