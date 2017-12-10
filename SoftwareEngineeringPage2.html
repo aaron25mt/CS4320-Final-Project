@@ -5,118 +5,14 @@
 		<title>Find Local Artist and Shows</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="event_styles.css">
 		<script src="jquery-3.2.1.min.js"></script>
-		<script src="functions.js"></script>
+		<script src="page2_javascript.js"></script>
 		<script>
-
-	  var search = getParameter('search');
-		var search_type = getParameter('search_type');
-
 		$(document).ready(function(){
-				$.get("events.php",{search: search, search_type: search_type}, function(json_results){
-					fill_table(json_results);
-
-				})
+			request_events();
 		});
-
 		</script>
-
-    <style>
-        input[type=text] {
-        width: 130px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        background-image: url('searchicon.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        opacity: .9;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
-        }
-
-        input[type=text]{
-            width: 50%;
-            margin-top: 20px;
-        }
-
-        body{
-            background-image: url('https://media.giphy.com/media/nYijNcY8PWWrK/giphy.gif');
-            background-size: cover;
-        }
-
-        div{
-            margin-top: 0%;
-            margin-left: 34%;
-        }
-
-        button{
-            padding: 10px;
-            margin-left: 20px;
-        }
-
-        form{
-            width: 90%;
-            margin-top: 40px;
-            margin-left: 115px;
-            border: 1px solid black;
-            background-color: lightblue;
-            opacity: 0.6;
-        }
-
-        table{
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        tr,td{
-            border: 2px solid white;
-            padding: 20px;
-        }
-
-        tr:hover {
-            background-color: slategray;
-        }
-
-        p{
-            font-size: 18px;
-        }
-
-        #offset{
-            text-align: left;
-        }
-
-        a:hover{
-            color: white;
-        }
-
-        img{
-            width: 300px;
-            height: 300px;
-        }
-
-        .mySlides {
-            display:none;
-            width: 100%;
-        }
-				.odd{
-						background-color: white;
-				}
-				.even{
-					background-color: lightgray;
-				}
-				.description{
-					text-align: center;
-				}
-				.thumbnail{
-					vertical-align: middle;
-				}
-
-
-    </style>
 
     </head>
     <body>
@@ -134,22 +30,23 @@
         <table id="events">
         </table>
 
-    <script>
-        var myIndex = 0;
-        carousel();
+				<script>
+				var myIndex = 0;
+				carousel();
 
-        function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}
-        x[myIndex-1].style.display = "block";
-        setTimeout(carousel, 5000); // Change image every 5 seconds
-        }
-    </script>
+				function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+				   x[i].style.display = "none";
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}
+				x[myIndex-1].style.display = "block";
+				setTimeout(carousel, 5000); // Change image every 5 seconds
+				}
+				</script>
+
 
     </body>
 </html>

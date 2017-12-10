@@ -3,6 +3,7 @@
 $app_key = 'c9FLdhZjFCZmpbZZ';
 $search_type = $_GET['search_type'];
 $event_type = "music";
+$page_number = $_GET['offset'];
 $apiUrl = "";
 if($search_type == "location"){
   $location=$_GET['search'];
@@ -14,7 +15,7 @@ elseif($search_type=="artist"){
 }
 
 
-  $json = json_decode(file_get_contents($apiUrl . "&page_size=5"), true);
+  $json = json_decode(file_get_contents($apiUrl . "&page_size=10"), true);
 
 
     $event_array = $json['events']['event'];

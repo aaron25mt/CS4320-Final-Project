@@ -1,3 +1,15 @@
+
+//Make get call to script to retrieve events
+function request_events(){
+var search = getParameter('search');
+var search_type = getParameter('search_type');
+
+$.get("events.php",{search: search, search_type: search_type}, function(json_results){
+      fill_table(json_results);
+    })
+}
+
+//Used to retrieve parameters out of URL
 function getParameter(theParameter) {
   var params = window.location.search.substr(1).split('&');
 
@@ -10,8 +22,9 @@ function getParameter(theParameter) {
   return false;
 }
 
+
+//Fill the table(id=events) with the events passed as a json string
 function fill_table(json){
-  console.log(json);
   var events = JSON.parse(json);
   for(var i=0;i<events.length;i++){
     event = events[i];
@@ -41,5 +54,4 @@ function fill_table(json){
     var content = "<tr class='"+row_class+"'><td>" + title + image + venue + date + description + "</td></tr>";
     $("#events").append(content);
   }
-
 }
