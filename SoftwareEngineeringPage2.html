@@ -17,10 +17,17 @@
     </head>
     <body>
 
-    <div>
-    <input type="text" name="search" placeholder="Search For Concerts Near You and Artists">
-    <button type="button">Search</button>
-    </div>
+    <div id="search_bar">
+			<form action="SoftwareEngineeringPage2.html" method="get">
+		<input type="text" name="search" placeholder="Search For Concerts Near You and Local Artists">
+		<select name="search_type">
+				<option value="artist">By Artist</option>
+				<option value="location">By Location</option>
+		</select>
+		<input value="search" type="submit">
+	</form>
+</div>
+
 
     <img class="mySlides" src="https://media.giphy.com/media/yXJieZoSaLx6w/giphy.gif">
     <img class="mySlides" src="https://media.giphy.com/media/nYijNcY8PWWrK/giphy.gif">
