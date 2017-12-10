@@ -34,7 +34,7 @@ function fill_table(json){
       description="<p class='description'> No description available.</p>";
     }
     if(event.image!=null){
-      image = "<img class='w3-center' src='" + event.image.medium.url + "'>";
+      image = "<img class='thumbnail' src='" + event.image.medium.url + "'>";
     }
 
 
@@ -43,5 +43,3 @@ function fill_table(json){
   }
 
 }
-
-//to Do: Check if variables are actual values or are null, as they are not guaranteed by the server to have values

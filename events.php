@@ -1,19 +1,12 @@
 
 <?php
-error_reporting(E_ALL);
 $app_key = 'c9FLdhZjFCZmpbZZ';
 $search_type = $_GET['search_type'];
 $event_type = "music";
 $apiUrl = "";
 if($search_type == "location"){
-  if (is_numeric($_GET['search'])) {
-    $zip_code = $_GET['search'];
-    $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&category=%s&location=%s&date=Future", $app_key,$event_type, $zip_code);
-  } else {
-    $city = explode(", ", $_GET['search'])[0];
-    $state = explode(", ", $_GET['search'])[1];
-    $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&category=%s&location=%s,%s&date=Future",$app_key,$event_type, $city, $state);
-  }
+  $location=$_GET['search'];
+    $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&category=%s&location=%s&date=Future", $app_key,$event_type, $location);
 }
 elseif($search_type=="artist"){
   $artist = $_GET['search'];
