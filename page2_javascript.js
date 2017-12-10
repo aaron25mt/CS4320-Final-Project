@@ -1,10 +1,12 @@
+var pg_num = 0;
 
 //Make get call to script to retrieve events
 function request_events(){
-var search = getParameter('search');
-var search_type = getParameter('search_type');
+  pg_num++;
+  var search = getParameter('search');
+  var search_type = getParameter('search_type');
 
-$.get("events.php",{search: search, search_type: search_type}, function(json_results){
+  $.get("events.php",{search: search, search_type: search_type,offset: pg_num}, function(json_results){
       fill_table(json_results);
     })
 }

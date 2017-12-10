@@ -3,19 +3,25 @@
 $app_key = 'c9FLdhZjFCZmpbZZ';
 $search_type = $_GET['search_type'];
 $event_type = "music";
-$page_number = $_GET['offset'];
+$offset = $_GET['offset'];
 $apiUrl = "";
 if($search_type == "location"){
   $location=$_GET['search'];
-    $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&category=%s&location=%s&date=Future", $app_key,$event_type, $location);
+    $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&category=%s&location=%s&date=Future&sort_order=date", $app_key,$event_type, $location);
 }
 elseif($search_type=="artist"){
   $artist = $_GET['search'];
-  $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&category=%s&keywords=%s&date=Future",$app_key,$event_type,$artist);
+  $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&category=%s&keywords=%s&date=Future&sort_order=relevance",$app_key,$event_type,$artist);
 }
 
+ $results_per_page = 10;
+ $page_size= sprintf("&page_size=%s",$results_per_page);
 
-  $json = json_decode(file_get_contents($apiUrl . "&page_size=10"), true);
+
+ $page_number= sprintf("&page_number=%s",$offset);
+
+$apiUrl.=$page_size.$page_number;
+  $json = json_decode(file_get_contents($apiUrl), true);
 
 
     $event_array = $json['events']['event'];

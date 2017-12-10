@@ -88,5 +88,12 @@ img{
   text-align: center;
 }
 .thumbnail{
-  vertical-align: middle;
+  margin: auto;
+  display: block;
+}
+
+#load_more{
+  width: 50%;
+  margin: auto;
+  display: block;
 }
