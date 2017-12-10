@@ -11,17 +11,37 @@ function getParameter(theParameter) {
 }
 
 function fill_table(json){
+  console.log(json);
   var events = JSON.parse(json);
-  for(event in events){
-
+  for(var i=0;i<events.length;i++){
+    event = events[i];
+    var row_class = "";
+    if(i%2==0){
+        row_class = "even";
+    }
+    else{
+      row_class = "odd";
+    }
     var title = "<h1 class='w3-center'>" + event.title + "</h1>";
     var venue = "<h2 class='w3-center'>" + event.venue_name + "</h2>";
     var date = "<h2 class='w3-center'>" +  event.start_time + "</h2>";
-    var description= "<p>" + event.description + "</p>";
-    var image = "<img src='" + event.image.medium.url + "'>";
+    var description="";
+    var image = "";
+    if(event.description!=null){
+      description= "<p class='description'>" + event.description + "</p>";
+    }
+    else{
+      description="<p class='description'> No description available.</p>";
+    }
+    if(event.image!=null){
+      image = "<img class='w3-center' src='" + event.image.medium.url + "'>";
+    }
 
-    var content = "<tr><td>" + title + image + venue + date + description + "</td></tr>";
+
+    var content = "<tr class='"+row_class+"'><td>" + title + image + venue + date + description + "</td></tr>";
     $("#events").append(content);
   }
 
 }
+
+//to Do: Check if variables are actual values or are null, as they are not guaranteed by the server to have values

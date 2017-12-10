@@ -10,12 +10,13 @@
 		<script>
 
 	  var search = getParameter('search');
-		var catogory = getParameter('category');
+		var search_type = getParameter('search_type');
 
 		$(document).ready(function(){
-				$.get("events.php",{search: search, catogory: category }, function(json_results){
-					fill_table(json_results));
-				}
+				$.get("events.php",{search: search, search_type: search_type}, function(json_results){
+					fill_table(json_results);
+
+				})
 		});
 
 		</script>
@@ -76,22 +77,12 @@
             padding: 20px;
         }
 
-        .odd{
-            background-color: white;
-        }
-
-        .odd:hover{
-            background-color: slategray;
-            opacity:.9;
-        }
-
         tr:hover {
             background-color: slategray;
-            opacity:.9;
         }
 
         p{
-            font-size: 30px;
+            font-size: 18px;
         }
 
         #offset{
@@ -103,14 +94,23 @@
         }
 
         img{
-            width: 500px;
-            height 300px;
+            width: 300px;
+            height: 300px;
         }
 
         .mySlides {
             display:none;
             width: 100%;
         }
+				.odd{
+						background-color: white;
+				}
+				.even{
+					background-color: lightgray;
+				}
+				.description{
+					text-align: center;
+				}
 
     </style>
 

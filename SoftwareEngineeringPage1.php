@@ -47,8 +47,8 @@
     <div>
 			<form action="SoftwareEngineeringPage2.html" method="get">
     <input type="text" name="search" placeholder="Search For Concerts Near You and Local Artists">
-		<select name="category">
-				<option value="music">By Artist</option>
+		<select name="search_type">
+				<option value="artist">By Artist</option>
 				<option value="location">By Location</option>
 		</select>
     <input value="search" type="submit">
