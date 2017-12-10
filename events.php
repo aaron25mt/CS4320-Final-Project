@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <?php
+error_reporting(E_ALL);
+$app_key = 'c9FLdhZjFCZmpbZZ';
   if (is_numeric($_GET['location'])) {
-    $apiSecret = "86d96eae03383a4b475a0d16bac6e6619c6fcae09288f1946d73d7acfac32e7b";
-    $clientId = "OTYxMzg3MHwxNTEwNTE5NTE3LjYx";
-    $apiUrl = sprintf("https://api.seatgeek.com/2/events?client_secret=%s&client_id=%s&postal_code=%s", $apiSecret, $clientId, $_GET['location']);
+    $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&location=%s&date=Future", $app_key, $_GET['location']);
   } else {
     $city = explode(", ", $_GET['location'])[0];
     $state = explode(", ", $_GET['location'])[1];
-    $apiUrl = sprintf("https://api.seatgeek.com/2/events?venue.city=%s&venue.state=%s", $city, $state);
+    $apiUrl = sprintf("http://api.eventful.com/json/events/search?app_key=%s&location=%s,%s&date=Future",$app_key, $city, $state);
   }
   if (isset($_GET['radius']) && is_numeric($_GET['radius'])) {
     $apiUrl .= "&range=" . $_GET['radius'] . "mi";
   }
   if ($_GET['type'] != 'all') {
-    $apiUrl .= "&taxonomies.name=" . $_GET['type'];
+    $apiUrl .= "&category=" . $_GET['type'];
   }
-  $json = json_decode(file_get_contents($apiUrl . "&per_page=15"), true);
+  $json = json_decode(file_get_contents($apiUrl . "&page_size=5"), true);
+
 ?>
 <html>
 <head>
@@ -98,15 +99,11 @@
       return "<pre>" . $json . "</pre>";
     }
 
-    foreach($json['events'] as $key=>$event) {
-      $date = date_format(date_create($event['datetime_local']), 'M d, Y @ g:m A (T)');
+    $event_array = $json['events'];
+    foreach($event_array['event'] as $event) {
       echo "<tr>";
-      if($event['performers'][0]['image']) {
-        echo "<td style=\"background: url('" . $event['performers'][0]['image'] . "') no-repeat; background-size: cover;\"></td>";
-      } else {
-        echo "<td><div class='well' style='color:black'>No Image<br>Provided</div></td>";
-      }
-      echo sprintf("<td class='right'><span class='eventName'>%s</span><br><span class='small'>Location: %s</span><br><span class='small'>Time: %s</span><br><a class='btn btn-primary btn-large' target='_blank' href='%s'>More Details &raquo;</a><br></td>", $event['short_title'], $event['venue']['name'], $date, $event['url']);
+        echo "<td style=\"background: url('" . $event['image']['medium']['url'] . "') no-repeat; background-size: cover;\"></td>";
+      echo sprintf("<td class='right'><span class='eventName'>%s</span><br><span class='small'>Location: %s</span><br><span class='small'>Time: %s</span><br><a class='btn btn-primary btn-large' target='_blank' href='%s'>More Details &raquo;</a><br></td>", $event['title'], $event['venue_name'], $event['start_time'],$event['url']);
       //echo "<td id='middle'>" . $event['short_title'] . "<br>" . $event['venue']['name'] . "</td>";
       //echo "<td id='right'><a class='btn btn-primary btn-large' target='_blank' href='" . $event['url'] . "'>More Details &raquo;</a></td>";
       echo "</tr>";
