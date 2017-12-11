@@ -18,6 +18,7 @@
 
         input[type=text]{
             position: absolute;
+            margin: auto;
             left: 33%;
             top: 41%;
             width: 30%;
@@ -25,50 +26,61 @@
         
         input[type=submit]{
             position: absolute;
-            left: 69%;
-            top: 41.5%;
+            margin: auto;
+            left: 71%;
+            top: 42.5%;
         }
         
         body{
             background-image: url('https://media.giphy.com/media/nYijNcY8PWWrK/giphy.gif');
             background-size: cover;
-        }
-        
-        div{
-            margin-left: 33%;
-        }
+            height: 100%;
+            width: 100%;
+        }     
         
         button{
             padding: 10px; 
             position: absolute;
-            left: 64%;
+            margin: auto;
+            left: 67%;
             top: 41%;
         }
         
         select{
-            padding: 10px; 
+            padding: 10px;
             position: absolute;
+            margin: auto;
             left: 63.5%;
-            top: 41.5%;  
+            top: 42.5%;  
         }
         
         img{
+            top: -20%;
             position: absolute;
-            top: 10%;
-            left: 41%;
             width: 500px;
             height: 500px;
         }
         
+        #header {
+            width: 100%;
+            height: 400px;
+            margin: auto;
+        }
         
+        #header img {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }
     </style>
         
     </head>
-    <body>
-  
-    <img src='Concert.ly.png' alt="Logo">   
+    <body>  
         
-    <div>
+    <div id="header">
+    
+        <div id="header"><img src='Concert.ly.png' alt="Logo" align="middle"></div> 
+        
         <form action="SoftwareEngineeringPage2.html" method="get">
         <input type="text" name="search" placeholder="Search For Concerts Near You and Local Artists">
         <select name="search_type">
