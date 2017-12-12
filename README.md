@@ -30,4 +30,5 @@ Scrum Board:[Axosoft](https://rkct24.axosoft.com)
 Link to site: [Concertly](http://ec2-54-172-173-172.compute-1.amazonaws.com/)
 
 Use Case: [Diagram](SE_Use_Cases.jpg)
-Presentation: [Video Presentation] (https://drive.google.com/file/d/1uk8Obq9O9rp51xaam9hYyYjyRCVuQUSs/view?usp=sharing)
+
+[Video Presentation](https://drive.google.com/file/d/1uk8Obq9O9rp51xaam9hYyYjyRCVuQUSs/view?usp=sharing)
