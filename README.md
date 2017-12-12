@@ -2,13 +2,15 @@
 
 ## **CS Group Members**
 ###  Created the backend for the website
-  Austin Meyers
+  Austin Myers
 
   Darrell Martin
 
   Randall Young
 
   Aaron Thomas
+  
+Scrum board:[Axosoft](sefinalproject.axosoft.com]
 
 ## **IT Group Members**
 ### Created the frontend, logo, and promotional video
