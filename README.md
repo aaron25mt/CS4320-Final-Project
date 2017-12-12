@@ -10,7 +10,7 @@
 
   Aaron Thomas
   
-Scrum board:[Axosoft](sefinalproject.axosoft.com)
+Scrum board:[Axosoft](http://sefinalproject.axosoft.com)
 
 ## **IT Group Members**
 ### Created the frontend, logo, and promotional video
@@ -26,6 +26,6 @@ Greg Rieves
 **About:** Concert.ly is a web application that helps users find upcoming concerts. The user is able to search by city or by artist and the app will display all upcoming concerts based on their search criteria. The results display the artist name, information about the artist and concert, and the date which the artist will be performing.
 
 
-Link to site: [Concertly](ec2-54-172-173-172.compute-1.amazonaws.com/)
+Link to site: [Concertly](http://ec2-54-172-173-172.compute-1.amazonaws.com/)
 
 Use Case: [Diagram](SE_Use_Cases.jpg)
