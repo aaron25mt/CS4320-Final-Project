@@ -22,6 +22,7 @@ Keego Gross
 
 Greg Rieves
 
+Scrum Board:[Axosoft](https://rkct24.axosoft.com)
 
 **About:** Concert.ly is a web application that helps users find upcoming concerts. The user is able to search by city or by artist and the app will display all upcoming concerts based on their search criteria. The results display the artist name, information about the artist and concert, and the date which the artist will be performing.
 
