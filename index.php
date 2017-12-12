@@ -1,5 +1,4 @@
 <?php
-header("Location: SoftwareEngineeringPage1.php");
+header("Location: SoftwareEngineeringPage1.html");
 exit();
 ?>
-

@@ -3,81 +3,22 @@
 <html>
 	<head>
 		<title>Find Local Artist and Shows</title>
-    <style> 
-        input[type=text] {
-        width: 130px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        background-position: center; 
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        }
 
-        input[type=text]{
-            position: absolute;
-            left: 33%;
-            top: 41%;
-            width: 30%;
-        }
-        
-        input[type=submit]{
-            position: absolute;
-            left: 69%;
-            top: 41.5%;
-        }
-        
-        body{
-            background-image: url('https://media.giphy.com/media/nYijNcY8PWWrK/giphy.gif');
-            background-size: cover;
-        }
-        
-        div{
-            margin-left: 33%;
-        }
-        
-        button{
-            padding: 10px; 
-            position: absolute;
-            left: 64%;
-            top: 41%;
-        }
-        
-        select{
-            padding: 10px; 
-            position: absolute;
-            left: 63.5%;
-            top: 41.5%;  
-        }
-        
-        img{
-            position: absolute;
-            top: 10%;
-            left: 41%;
-            width: 500px;
-            height: 500px;
-        }
-        
-        
-    </style>
-        
     </head>
     <body>
-  
-    <img src='Concert.ly.png' alt="Logo">   
-        
-    <div>
-        <form action="SoftwareEngineeringPage2.html" method="get">
-        <input type="text" name="search" placeholder="Search For Concerts Near You and Local Artists">
-        <select name="search_type">
-                <option value="artist">By Artist</option>
-                <option value="location">By Location</option>
-        </select>
-        <input value="search" type="submit">
-        </form>
-    </div>
-        
+			<div id="header">
+
+			        <div id="header"><img src='Concert.ly.png' alt="Logo" align="middle"></div>
+
+			        <form action="SoftwareEngineeringPage2.html" method="get">
+			        <input type="text" name="search" placeholder="Search For Concerts Near You and Local Artists">
+			        <select name="search_type">
+			                <option value="artist">By Artist</option>
+			                <option value="location">By Location</option>
+			        </select>
+			        <input value="search" type="submit">
+			        </form>
+			</div>
+
     </body>
 </html>
