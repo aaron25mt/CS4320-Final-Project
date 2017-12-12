@@ -10,7 +10,7 @@
 
   Aaron Thomas
   
-Scrum board:[Axosoft](sefinalproject.axosoft.com]
+Scrum board:[Axosoft](sefinalproject.axosoft.com)
 
 ## **IT Group Members**
 ### Created the frontend, logo, and promotional video
